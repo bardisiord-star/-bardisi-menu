@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حلويات برديسي — السعرات ومسببات الحساسية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Almarai:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FAF7F1;
-    --ink:#3A2E22;
-    --powder:#A9C2D6;
-    --powder-deep:#5D7B93;
-    --powder-dark:#3E5567;
+    --bg:#FBF9F6;
+    --ink:#3E2C1E;
+    --brown-soft:#6B5642;
+    --blue:#A9C2D6;
+    --blue-deep:#5D7B93;
+    --blue-dark:#3E5567;
     --card:#FFFFFF;
-    --line:#E6DFD1;
+    --line:#EDE7DC;
     --caramel:#B87A3D;
     --caramel-soft:#F2E2CD;
   }
@@ -23,50 +24,47 @@
   body{
     background:var(--bg);
     color:var(--ink);
-    font-family:'IBM Plex Sans Arabic',sans-serif;
+    font-family:'Almarai',sans-serif;
     min-height:100vh;
   }
-  h1,h2,h3,.display{font-family:'Reem Kufi',sans-serif; font-weight:600;}
+  h1,h2,h3,.display{font-family:'Amiri',serif; font-weight:700;}
 
   /* ---------- HERO / LANDING ---------- */
   .hero{
-    background:var(--powder);
-    color:var(--powder-dark);
-    padding:44px 20px 64px;
+    background:var(--card);
+    color:var(--ink);
+    padding:44px 22px 34px;
     text-align:center;
-    position:relative;
-    overflow:hidden;
-    clip-path:polygon(0 0,100% 0,100% 84%,0 100%);
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:radial-gradient(circle, rgba(255,255,255,.35) 1.5px, transparent 1.8px);
-    background-size:26px 26px;
-    opacity:.6;
+    border-bottom:1px solid var(--line);
   }
   .hero-inner{position:relative;}
   .eyebrow{
-    display:inline-block;
-    font-family:'Reem Kufi',sans-serif;
-    font-size:14px;
-    letter-spacing:.06em;
-    color:var(--powder-dark);
-    background:rgba(255,255,255,.55);
-    border-radius:999px;
-    padding:6px 16px;
-    margin-bottom:16px;
+    display:block;
+    font-family:'Amiri',serif;
+    font-weight:700;
+    font-size:30px;
+    letter-spacing:.02em;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .eyebrow .since{
+    display:block;
+    font-family:'Almarai',sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--blue-deep);
+    margin-top:6px;
   }
   .hero h1{
-    font-size:42px;
-    margin:0 0 8px;
-    color:#2C3E4C;
+    font-size:22px;
+    margin:18px 0 8px;
+    color:var(--ink);
   }
   .hero p{
-    margin:0 0 28px;
-    font-size:16px;
-    color:#3E5567;
-    opacity:.85;
+    margin:0 0 26px;
+    font-size:14.5px;
+    color:var(--brown-soft);
   }
   .link-stack{
     display:flex;
@@ -80,29 +78,27 @@
     align-items:center;
     justify-content:space-between;
     gap:12px;
-    background:#FFFFFF;
-    color:var(--powder-dark);
+    background:var(--blue);
+    color:var(--blue-dark);
     text-decoration:none;
     padding:16px 20px;
-    border-radius:14px;
-    font-weight:700;
-    font-size:16px;
-    box-shadow:0 4px 14px rgba(61,84,102,.18);
+    border-radius:12px;
+    font-weight:800;
+    font-size:15.5px;
     transition:transform .12s ease;
   }
   .link-btn:active{transform:translateY(3px);}
-  .link-btn .arrow{font-size:20px; opacity:.5;}
+  .link-btn .arrow{font-size:20px; opacity:.6;}
   .link-btn.secondary{
-    background:rgba(255,255,255,.18);
-    color:#2C3E4C;
-    border:1.5px solid rgba(44,62,76,.35);
-    box-shadow:none;
+    background:var(--card);
+    color:var(--ink);
+    border:1.5px solid var(--line);
   }
-  .link-btn .ic{font-size:20px;}
+  .link-btn .ic{font-size:18px;}
 
   /* ---------- BROWSER ---------- */
-  .browser{max-width:720px; margin:0 auto; padding:26px 16px 70px;}
-  .search-wrap{position:sticky; top:0; background:var(--bg); z-index:5; padding:14px 0 10px;}
+  .browser{max-width:560px; margin:0 auto; padding:0 0 70px;}
+  .search-wrap{position:sticky; top:0; background:var(--bg); z-index:5; padding:16px 18px 10px;}
   .search{
     display:flex; align-items:center; gap:10px;
     background:var(--card);
@@ -112,116 +108,104 @@
   }
   .search input{
     border:none; outline:none; background:transparent;
-    font-family:'IBM Plex Sans Arabic'; font-size:16px; flex:1; color:var(--ink);
+    font-family:'Almarai'; font-size:15px; flex:1; color:var(--ink);
   }
-  .chips-wrap{ position:relative; }
+  .chips-wrap{ position:relative; padding:0 18px;}
   .chips{
-    display:flex; gap:8px; overflow-x:auto; padding:12px 2px 8px;
+    display:flex; gap:8px; overflow-x:auto; padding:12px 2px 10px;
     -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin; scrollbar-color: var(--caramel) var(--line);
   }
-  .chips::-webkit-scrollbar{ height:6px; }
-  .chips::-webkit-scrollbar-thumb{ background:var(--caramel); border-radius:99px; }
+  .chips::-webkit-scrollbar{ height:5px; }
+  .chips::-webkit-scrollbar-thumb{ background:var(--blue); border-radius:99px; }
   .chips::-webkit-scrollbar-track{ background:var(--line); border-radius:99px; }
-  .scroll-hint{
-    position:absolute; left:0; top:12px; bottom:8px; width:28px;
-    background:linear-gradient(to left, var(--bg), transparent);
-    pointer-events:none;
-    display:flex; align-items:center; justify-content:flex-start;
-    font-size:14px; color:var(--powder-deep); opacity:.7;
-  }
+  .scroll-hint{ display:none; }
   .chip{
     flex:0 0 auto;
     padding:8px 16px;
-    border-radius:10px;
+    border-radius:9px;
     background:var(--card);
     border:1.5px solid var(--line);
-    font-size:14px; font-weight:700;
-    color:var(--powder-dark);
+    font-size:13.5px; font-weight:700;
+    color:var(--blue-dark);
     white-space:nowrap;
     cursor:pointer;
   }
-  .chip.active{background:var(--powder-dark); color:#fff; border-color:var(--powder-dark);}
+  .chip.active{background:var(--ink); color:#fff; border-color:var(--ink);}
 
-  .count-line{font-size:13px; color:#8C7F6C; margin:14px 2px 8px;}
+  .count-line{font-size:12.5px; color:#9A8C77; margin:16px 20px 10px;}
 
-  .grid{display:flex; flex-direction:column; gap:10px;}
+  .grid{display:flex; flex-direction:column; gap:20px; padding:0 18px;}
   .pcard{
     background:var(--card);
     border:1px solid var(--line);
-    border-inline-start:4px solid var(--powder);
-    border-radius:12px;
-    padding:14px 16px;
-    display:flex; align-items:center; gap:14px;
+    border-radius:16px;
+    overflow:hidden;
     cursor:pointer;
+    box-shadow:0 6px 18px rgba(62,44,30,.06);
   }
-  .cal-badge{
-    flex:0 0 auto;
-    width:56px; height:56px;
-    border-radius:50%;
-    background:#fff;
-    border:3px solid var(--caramel);
-    color:var(--caramel);
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    line-height:1;
-  }
-  .cal-badge b{font-size:15px; font-family:'Reem Kufi';}
-  .cal-badge span{font-size:8.5px; opacity:.8; color:var(--ink);}
-  .cal-badge.pending{border-color:#D5CBB8; color:#B3A98F;}
+  .pcard-body{padding:14px 18px 16px;}
+  .cal-badge{display:none;}
   .pthumb{
-    flex:0 0 auto;
-    width:58px; height:58px;
-    border-radius:12px;
-    object-fit:cover;
-    border:1px solid var(--line);
+    width:100%; height:190px;
+    object-fit:cover; display:block;
   }
-  .pcard .info{flex:1; min-width:0;}
-  .pcard .info .cat{font-size:11px; color:var(--powder-deep); font-weight:700; margin-bottom:2px;}
-  .pcard .info .name{font-size:16px; font-weight:700; color:var(--ink);}
-  .allergen-row{display:flex; gap:4px; margin-top:6px; flex-wrap:wrap;}
+  .pcard.no-img .pcard-body{padding-top:16px;}
+  .pcard .info{width:100%;}
+  .pcard .info .cat{font-size:11px; color:var(--blue-deep); font-weight:700; margin-bottom:3px; letter-spacing:.02em;}
+  .pcard .info .name{font-size:18px; font-weight:700; color:var(--ink); font-family:'Amiri',serif;}
+  .pcard .meta-row{display:flex; align-items:center; justify-content:space-between; margin-top:10px;}
+  .cal-pill{
+    background:var(--blue); color:var(--ink); font-weight:800; font-size:12.5px;
+    padding:5px 12px; border-radius:999px; white-space:nowrap;
+  }
+  .cal-pill.pending{background:var(--line); color:#9A8C77;}
+  .allergen-row{display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end;}
   .aicon{
-    font-size:13px; background:var(--caramel-soft); border-radius:6px; padding:2px 6px;
+    font-size:12px; background:var(--caramel-soft); border-radius:6px; padding:3px 7px;
   }
   .empty-cat{
     text-align:center; padding:40px 20px; color:#9A8C70; font-size:14px;
-    border:1.5px dashed var(--line); border-radius:14px;
+    border:1.5px dashed var(--line); border-radius:14px; margin:0 20px;
   }
 
   /* ---------- MODAL ---------- */
   .overlay{
-    position:fixed; inset:0; background:rgba(44,62,76,.55);
+    position:fixed; inset:0; background:rgba(62,44,30,.55);
     display:none; align-items:flex-end; justify-content:center; z-index:50;
   }
   .overlay.open{display:flex;}
   .sheet{
     background:var(--bg);
-    width:100%; max-width:520px;
-    border-radius:20px 20px 0 0;
-    max-height:88vh; overflow-y:auto;
-    padding:22px 20px 30px;
+    width:100%; max-width:560px;
+    border-radius:22px 22px 0 0;
+    max-height:90vh; overflow-y:auto; overflow-x:hidden;
+    padding:0 0 30px;
     animation:up .18s ease-out;
-    border-top:5px solid var(--powder);
   }
   @keyframes up{from{transform:translateY(30px); opacity:0;} to{transform:translateY(0); opacity:1;}}
-  .sheet-top{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;}
-  .sheet .cat{font-size:12px; font-weight:700; color:var(--powder-deep);}
-  .sheet h2{font-size:25px; margin:2px 0 14px; color:var(--ink);}
+  .sheet-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding:18px 20px 0; position:relative; z-index:3;
+  }
+  .sheet .cat{font-size:12px; font-weight:700; color:var(--blue-deep);}
+  .sheet h2{font-size:26px; margin:4px 0 0; color:var(--ink); font-family:'Amiri',serif;}
   .close-btn{
-    border:none; background:var(--line); width:32px; height:32px; border-radius:50%;
-    font-size:16px; cursor:pointer; color:var(--ink);
+    border:none; background:var(--card); width:34px; height:34px; border-radius:50%;
+    font-size:16px; cursor:pointer; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.12);
   }
   .sheet-img{
-    width:100%; height:270px; object-fit:cover;
-    object-position:center 22%;
-    border-radius:14px; margin-bottom:14px;
+    width:100%; aspect-ratio:5/4; object-fit:cover;
+    object-position:center top;
+    margin-bottom:0;
   }
+  .sheet-content{padding:18px 20px 0;}
   .cal-hero{
     display:flex; align-items:center; gap:16px;
-    background:var(--powder-dark); color:#fff;
+    background:var(--blue-dark); color:#fff;
     border-radius:14px; padding:16px 18px; margin-bottom:16px;
   }
-  .cal-hero .num{font-family:'Reem Kufi'; font-size:38px; font-weight:700; line-height:1;}
-  .cal-hero .lbl{font-size:12px; opacity:.85;}
+  .cal-hero .num{font-family:'Amiri',serif; font-size:36px; font-weight:700; line-height:1;}
+  .cal-hero .lbl{font-size:12px; opacity:.9;}
   .nutri-grid{
     display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:18px;
   }
@@ -231,7 +215,7 @@
   }
   .nutri-cell .v{font-size:17px; font-weight:700;}
   .nutri-cell .l{font-size:11px; color:#8A7C63;}
-  .sec-title{font-size:14px; font-weight:700; color:var(--ink); margin:0 0 8px;}
+  .sec-title{font-size:14px; font-weight:700; color:var(--ink); margin:0 0 8px; font-family:'Amiri',serif;}
   .allergen-list{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;}
   .abadge{
     display:flex; align-items:center; gap:6px;
@@ -240,14 +224,14 @@
     border-radius:999px; padding:7px 12px; font-size:13px; font-weight:700;
   }
   .no-allergen{
-    background:#E9F0F3; color:var(--powder-dark); border:1px solid #CFDFE7;
+    background:#E9F0F3; color:var(--blue-dark); border:1px solid #CFDFE7;
     border-radius:999px; padding:7px 12px; font-size:13px; font-weight:700; display:inline-block;
   }
   .note{
     font-size:12px; color:#7A6A4E; background:var(--caramel-soft); border-radius:10px; padding:10px 12px;
   }
   .disclaimer{
-    margin-top:26px; font-size:11.5px; color:#9A8C70; text-align:center; line-height:1.9;
+    margin-top:26px; font-size:11.5px; color:#9A8C70; text-align:center; line-height:1.9; padding:0 20px;
   }
 </style>
 </head>
@@ -255,9 +239,9 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">حلويات برديسي</span>
-    <h1>وش تبي تعرف؟</h1>
-    <p>اختر من الروابط تحت</p>
+    <span class="eyebrow">Bardisi<span class="since">S I N C E &nbsp; 1 9 9 0</span></span>
+    <h1>دليلك الكامل لقائمتنا</h1>
+    <p>الأسعار، السعرات الحرارية، ومسبّبات الحساسية</p>
     <div class="link-stack">
       <a class="link-btn" href="https://menusahl.com/bardisi" target="_blank" rel="noopener">
         <span><span class="ic">📋</span> المنيو والأسعار</span>
@@ -569,18 +553,23 @@ function renderGrid(){
   const catLabel = k => (CATEGORIES.find(c=>c[0]===k)||[,''])[1];
 
   gridEl.innerHTML = items.map(p=>{
-    const calBadge = p.calories==null
-      ? `<div class="cal-badge pending"><b>؟</b><span>قريبًا</span></div>`
-      : `<div class="cal-badge"><b>${p.calories}</b><span>سعرة</span></div>`;
     const img = IMAGES[p.name];
-    const thumb = img ? `<img class="pthumb" src="${img}" alt="${p.name}">` : calBadge;
+    const thumb = img ? `<img class="pthumb" src="${img}" alt="${p.name}">` : '';
+    const calPill = p.calories==null
+      ? `<span class="cal-pill pending">قريبًا</span>`
+      : `<span class="cal-pill">${p.calories} سعرة / ${p.serving}غ</span>`;
     return `
-    <div class="pcard" data-id="${p.id}">
+    <div class="pcard ${img ? '' : 'no-img'}" data-id="${p.id}">
       ${thumb}
-      <div class="info">
-        <div class="cat">${catLabel(p.category)}</div>
-        <div class="name">${p.name}</div>
-        ${allergenIcons(p.allergens)}
+      <div class="pcard-body">
+        <div class="info">
+          <div class="cat">${catLabel(p.category)}</div>
+          <div class="name">${p.name}</div>
+        </div>
+        <div class="meta-row">
+          ${calPill}
+          ${allergenIcons(p.allergens)}
+        </div>
       </div>
     </div>
   `;}).join('');
@@ -639,7 +628,7 @@ function openSheet(id){
       <button class="close-btn" id="closeBtn">✕</button>
     </div>
     ${heroImg}
-
+    <div class="sheet-content">
     ${calHero}
 
     <div class="sec-title">مسببات الحساسية</div>
@@ -648,6 +637,7 @@ function openSheet(id){
     <div class="note">${hasCalories
       ? `تُحسب القيم الغذائية لكل ${p.serving} غرام من المنتج، حسب تقرير مكتب الاستشارات الغذائية.`
       : `مسببات الحساسية موثّقة من التقرير الرسمي. القيم الغذائية لهذا المنتج لسا ما وصلت.`}</div>
+    </div>
   `;
   document.getElementById('closeBtn').addEventListener('click', closeSheet);
   overlay.classList.add('open');
@@ -666,4 +656,3 @@ renderGrid();
 
 </body>
 </html>
-?v=3
